@@ -16,7 +16,16 @@
 3. **输出即用**：每日时间线 + 住宿推荐 + 餐厅推荐 + Klook 预订链接 + 预算明细
 4. **自我进化**：每次使用后可以追加新知识，知识库自动索引
 
-## 📦 安装
+## 🤖 任何 AI 都能用（Claude / GPT / Gemini / DeepSeek）
+
+**复制 [PROMPT.md](PROMPT.md) 的全文，粘贴到任何 AI 对话框，它就能变成巴厘岛旅行规划师。**
+自包含设计，不需要安装、不需要 Codex。
+
+[📋 查看 PROMPT.md](https://raw.githubusercontent.com/joel0601/bali-planner/main/PROMPT.md)
+
+---
+
+## 📦 安装（Codex 用户）
 
 ### 方式一：直接安装到 Codex
 ```bash
@@ -29,6 +38,11 @@ git clone https://github.com/joel0601/bali-planner.git ~/.codex/skills/bali-plan
 ```
 
 ### 其他 AI Agent 学习路径
+
+**推荐：直接复制 [PROMPT.md](PROMPT.md) 粘贴到任意 AI。**
+
+或：
+
 ```
 # 直接读取 SKILL.md 即可获得完整指令
 https://raw.githubusercontent.com/joel0601/bali-planner/main/SKILL.md
