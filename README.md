@@ -1,6 +1,6 @@
 # 🏝️ Bali Planner — 巴厘岛交互式旅行规划 Skill
 
-> 基于 Tommy 2 年巴厘岛旅居真实经验，通过 14 个交互问题，生成可直接落地执行的旅行方案。
+> 基于我 2 年巴厘岛旅居真实经验，通过 14 个交互问题，生成可直接落地执行的旅行方案。
 
 [![Skill Type](https://img.shields.io/badge/Codex-Skill-0D9488)](https://github.com/joel0601/bali-planner)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -12,7 +12,7 @@
 这个 Skill 就像一个住在巴厘岛的朋友帮你规划行程——
 
 1. **交互式问答**：分 4 轮问你 14 个问题（同行关系、天数、预算、偏好...）
-2. **智能生成方案**：基于你的回答，匹配 Tommy 的一手经验
+2. **智能生成方案**：基于你的回答，匹配 我的一手经验
 3. **输出即用**：每日时间线 + 住宿推荐 + 餐厅推荐 + Klook 预订链接 + 预算明细
 4. **自我进化**：每次使用后可以追加新知识，知识库自动索引
 
@@ -56,7 +56,7 @@ bali-planner/
 │   └── openai.yaml             # 🏷️ 展示元数据
 ├── references/
 │   ├── questionnaire.md        # 📋 14 题交互框架
-│   ├── tommy_experience.md     # 🧠 Tommy 2 年旅居经验
+│   ├── my_experience.md     # 🧠 我 2 年旅居经验
 │   ├── klook_links.md          # 🔗 30+ 个 Klook 活动链接
 │   ├── itinerary_template.md   # 📝 输出模板
 │   └── knowledge/              # 🔄 自学习知识库
@@ -73,7 +73,7 @@ bali-planner/
 
 ## 🧠 知识来源
 
-- **Tommy 的环球旅居指南**：2 年巴厘岛旅居一手经验，覆盖 7 大章节
+- **我的环球旅居指南**：2 年巴厘岛旅居一手经验，覆盖 7 大章节
   - 区域选择（7 个区域详细对比）
   - 住宿推荐（从 ¥40 青旅到 ¥10,000+ 宝格丽）
   - 美食地图（20+ 家私藏餐厅）
@@ -95,4 +95,4 @@ python3 scripts/knowledge.py restaurant "餐厅名" "描述" "区域" "标签"
 
 ## 📄 License
 
-MIT © Tommy & Joel
+MIT © Joel
