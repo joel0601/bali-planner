@@ -167,3 +167,63 @@ python3 scripts/knowledge.py restaurant "Alchemy Bali" \
   "乌布" "素食,健康,网红"
 ```
 并将该条目标记来源为 `{用户名}反馈`，下次就会作为可信推荐出现。
+
+---
+
+## ✈️ 航班与酒店实时查询（v1.2）
+
+### 工作流程
+
+当用户提供了出发城市和日期后，使用 `scripts/flight_hotel.py` 生成：
+
+**机票查询**：
+```bash
+python3 scripts/flight_hotel.py flight {出发城市} 巴厘岛 {出发日期} {返回日期}
+```
+
+**酒店查询**（按用户选择的区域）：
+```bash
+python3 scripts/flight_hotel.py hotel {区域} {入住日期} {退房日期} {人数}
+```
+
+### 输出解读
+
+脚本返回三层信息：
+
+1. **历史参考价**（来自我的知识库）
+   - 低价/均价/高价三档
+   - 含航班时长和转机提示
+
+2. **实时搜索链接**（一键点击）
+   - 机票：Google Flights / Trip.com / 去哪儿
+   - 酒店：Agoda / Booking.com / Trip.com
+   - 链接已预填日期和城市，用户直接点击即可查看实时价格
+
+3. **Amadeus API 实时报价**（可选）
+   - 需用户注册免费 API Key：https://developers.amadeus.com/
+   - 设置环境变量 `AMADEUS_API_KEY` 和 `AMADEUS_API_SECRET`
+   - 可获得欧元报价和人民币估算
+
+### 在行程中的呈现
+
+生成方案时，机票和酒店信息放在预算明细前：
+
+```markdown
+## ✈️ 航班参考
+北京(PEK) → 巴厘岛(DPS)
+往返参考价：¥2000-6000（北京直飞约7h，转机居多）
+👉 [Google Flights 查实时价格](...)
+👉 [Trip.com 查实时价格](...)
+
+## 🏨 住宿实时搜索
+仓古 | 9月15日-18日 | 3晚
+参考价：¥300-800/晚
+👉 [Agoda](...) | [Booking.com](...) | [Trip.com](...)
+```
+
+### 默认值
+
+- 未指定出发城市 → 默认北京
+- 未指定日期 → 假设下月 1 号出发
+- 未指定返回日期 → 按出行天数自动推算
+- 酒店人数 → 默认 2 人
